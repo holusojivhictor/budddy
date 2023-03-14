@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>843432754231-ufm0l51uhf8vqk4i9e7g4ethfe4ier4f.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.843432754231-ufm0l51uhf8vqk4i9e7g4ethfe4ier4f</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>843432754231-e01828bdr9870aqgv2fpupkb6mnmvjpo.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCuEPna25ZCne6H4jk77mzIEBisXPXMdDY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>843432754231</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.morpheus.buddy.dev</string>
+	<key>PROJECT_ID</key>
+	<string>buddy-dev-1d63f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>buddy-dev-1d63f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:843432754231:ios:684e75629d328209b253b2</string>
+</dict>
+</plist>

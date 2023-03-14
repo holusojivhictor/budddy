@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "843432754231",
+    "project_id": "buddy-dev-1d63f",
+    "storage_bucket": "buddy-dev-1d63f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843432754231:android:39e78a811936285fb253b2",
+        "android_client_info": {
+          "package_name": "com.morpheus.buddy.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843432754231-e01828bdr9870aqgv2fpupkb6mnmvjpo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.morpheus.buddy.dev",
+            "certificate_hash": "d2566f7549935fb86cc44a7a1a6bea31ae74378a"
+          }
+        },
+        {
+          "client_id": "843432754231-44chtumcpqvqimdpv8147aara0hi089j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXFZz7D8aYJkJd1fvQRxMYJBSGXMt0oMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843432754231-44chtumcpqvqimdpv8147aara0hi089j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "843432754231-ufm0l51uhf8vqk4i9e7g4ethfe4ier4f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.morpheus.buddy.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

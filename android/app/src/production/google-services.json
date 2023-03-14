@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "76594779075",
+    "project_id": "buddy-prod-c7587",
+    "storage_bucket": "buddy-prod-c7587.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:76594779075:android:98975e0a6f9105e8082376",
+        "android_client_info": {
+          "package_name": "com.morpheus.buddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "76594779075-hlnjf3adlgb3e6kqls6blmnokr3sfdh3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.morpheus.buddy",
+            "certificate_hash": "d2566f7549935fb86cc44a7a1a6bea31ae74378a"
+          }
+        },
+        {
+          "client_id": "76594779075-6pc42mri9666cfat1e5r71va1uqvc5vk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVYWXeBjng6_INs28BiMjiUs9QEEFD1Pc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "76594779075-2ntigbpsfsk57quofbsof4vn96qfgtmt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "76594779075-292km4jumia88qv4iic1n14ic627tg40.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.morpheus.buddy"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

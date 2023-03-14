@@ -1,0 +1,18 @@
+enum SportType {
+  surfing,
+  athletics,
+  snowboarding,
+  cycling,
+  americanFootball,
+  formulaOne,
+  baseball,
+  boxing,
+  rugby,
+  volleyball,
+  hockey,
+  tennis,
+  golf,
+  cricket,
+  basketball,
+  football,
+}
