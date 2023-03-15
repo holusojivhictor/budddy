@@ -30,7 +30,7 @@ dependencies:
   logger: ^1.2.2
   package_info_plus: ^1.4.3+1
   pinput: ^2.2.31
-  responsive_builder: ^0.6.3
+  responsive_builder: ^0.6.4
   shared_preferences: ^2.0.18
   sprintf: ^7.0.0
   version_tracker: ^2.1.1
