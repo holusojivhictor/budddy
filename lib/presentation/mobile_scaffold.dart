@@ -1,5 +1,6 @@
 import 'package:buddy/application/bloc.dart';
 import 'package:buddy/colors.dart';
+import 'package:buddy/presentation/discover/discover_page.dart';
 import 'package:buddy/presentation/home/home_page.dart';
 import 'package:buddy/presentation/settings/settings_page.dart';
 import 'package:buddy/presentation/shared/extensions/focus_scope_node_extensions.dart';
@@ -45,11 +46,10 @@ class _MobileScaffoldState extends State<MobileScaffold> {
         child: TabBarView(
           controller: widget.tabController,
           physics: const NeverScrollableScrollPhysics(),
-          children: [
-            const HomePage(),
-            Container(),
-            Container(),
-            const SettingsPage(),
+          children: const [
+            HomePage(),
+            DiscoverPage(),
+            SettingsPage(),
           ],
         ),
       ),
@@ -66,11 +66,6 @@ class _MobileScaffoldState extends State<MobileScaffold> {
             icon: Icon(Icons.face_outlined),
             activeIcon: Icon(Icons.face),
             title: 'Profile',
-          ),
-          NavigationBarItem(
-            icon: Icon(Icons.diversity_2_outlined),
-            activeIcon: Icon(Icons.diversity_2_rounded),
-            title: 'Buddies',
           ),
           NavigationBarItem(
             icon: Icon(Icons.travel_explore_outlined),

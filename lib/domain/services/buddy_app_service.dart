@@ -4,6 +4,8 @@ import 'package:buddy/domain/enums/enums.dart';
 import 'package:buddy/domain/models/models.dart';
 
 abstract class BuddyAppService {
+  StreamController<bool> get isLoading;
+
   Future<void> init();
 
   Future<void> initBuddies();
@@ -12,7 +14,9 @@ abstract class BuddyAppService {
 
   BuddyFileModel get currentUser;
 
-  StreamController<bool> get isLoading;
+  BuddyFileModel getBuddyFromId(String id);
+
+  List<BuddyCardModel> getBuddiesForCard();
 
   Future<void> updateCurrentUser(
     String displayName,

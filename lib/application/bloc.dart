@@ -8,3 +8,4 @@ export 'home/home_bloc.dart';
 export 'page_view/page_view_bloc.dart';
 export 'forgot_password/forgot_password_bloc.dart';
 export 'buddies/buddies_bloc.dart';
+export 'buddy/buddy_bloc.dart';

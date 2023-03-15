@@ -22,24 +22,27 @@ class AvatarListPreview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        AvatarPreview(
-          height: 52,
-          image: image,
-          label: 'User avatar',
-          padding: const EdgeInsets.all(5),
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            border: Border.all(color: AppColors.primary, width: 1.5),
+    return Padding(
+      padding: const EdgeInsets.only(right: 5),
+      child: Column(
+        children: [
+          AvatarPreview(
+            height: 52,
+            image: image,
+            label: 'User avatar',
+            padding: const EdgeInsets.all(5),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: AppColors.primary, width: 1.5),
+            ),
           ),
-        ),
-        const SizedBox(height: 5),
-        Text(
-          displayName,
-          overflow: TextOverflow.ellipsis,
-        ),
-      ],
+          const SizedBox(height: 5),
+          Text(
+            displayName,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ],
+      ),
     );
   }
 }

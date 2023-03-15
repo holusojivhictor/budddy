@@ -1,4 +1,5 @@
 import 'package:buddy/application/bloc.dart';
+import 'package:buddy/presentation/shared/custom_app_bar.dart';
 import 'package:buddy/presentation/shared/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,18 +12,8 @@ class UpdateProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        scrolledUnderElevation: 0,
-        backgroundColor: theme.scaffoldBackgroundColor,
-        title: Text(
-          'Update Profile',
-          textAlign: TextAlign.center,
-          style: theme.textTheme.titleLarge!.copyWith(fontSize: 20, fontWeight: FontWeight.w700),
-        ),
-      ),
+      appBar: const CustomAppBar(title: 'Update Profile'),
       body: BlocBuilder<HomeBloc, HomeState>(
         builder: (ctx, state) => state.map(
           loading: (_) => const Loading(useScaffold: false),
@@ -50,3 +41,4 @@ class UpdateProfilePage extends StatelessWidget {
     );
   }
 }
+

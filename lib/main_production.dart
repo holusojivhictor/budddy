@@ -41,6 +41,12 @@ class BuddyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (ctx) {
+            final appService = getIt<BuddyAppService>();
+            return BuddiesBloc(appService);
+          },
+        ),
+        BlocProvider(
+          create: (ctx) {
             final loggingService = getIt<LoggingService>();
             final settingsService = getIt<SettingsService>();
             final deviceInfoService = getIt<DeviceInfoService>();
