@@ -36,6 +36,18 @@ class BuddyAppServiceImpl implements BuddyAppService {
   }
 
   @override
+  BuddyFileModel getBuddyFromId(String id) {
+    return _buddiesFile.firstWhere((el) => el.id == id);
+  }
+
+  @override
+  List<BuddyCardModel> getBuddiesForCard() {
+    final buddies = _buddiesFile.toList();
+    buddies.removeWhere((el) => el.id == _authService.currentUser.id);
+    return buddies.map(_toBuddyForCard).toList();
+  }
+
+  @override
   List<BuddyFileModel> get buddiesData => _buddiesFile;
 
   @override
@@ -94,6 +106,23 @@ class BuddyAppServiceImpl implements BuddyAppService {
   @override
   UserProfileModel getUserForProfile() {
     return _toProfileForCard(currentUser);
+  }
+
+  BuddyCardModel _toBuddyForCard(BuddyFileModel model) {
+    return BuddyCardModel(
+      id: model.id,
+      displayName: model.displayName,
+      avatarSource: model.avatarSource,
+      interests: model.sportInterests,
+      friends: model.friends.map((e) {
+        return FriendCardModel(
+          id: e.id,
+          displayName: e.displayName,
+          avatarSource: e.avatarSource,
+          interests: e.sportInterests,
+        );
+      }).toList(),
+    );
   }
 
   UserProfileModel _toProfileForCard(BuddyFileModel model) {

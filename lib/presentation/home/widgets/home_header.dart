@@ -21,46 +21,50 @@ class HomeHeader extends StatelessWidget {
     return BlocBuilder<HomeBloc, HomeState>(
       builder: (ctx, state) => state.map(
         loading: (_) => const Loading(useScaffold: false),
-        loaded: (state) => Padding(
-          padding: Styles.edgeInsetAll16,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text.rich(
-                TextSpan(
-                  text: 'Welcome back, \n',
-                  style: textTheme.headlineSmall!.copyWith(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
+        loaded: (state) {
+          final isSvg = state.avatarSource.contains('api.dicebear.com');
+
+          return Padding(
+            padding: Styles.edgeInsetAll16,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text.rich(
+                  TextSpan(
+                    text: 'Welcome back, \n',
+                    style: textTheme.headlineSmall!.copyWith(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: state.displayName,
+                        style: textTheme.headlineSmall!.copyWith(
+                          color: AppColors.primary,
+                        ),
+                      ),
+                    ],
                   ),
-                  children: <TextSpan>[
-                    TextSpan(
-                      text: state.displayName,
-                      style: textTheme.headlineSmall!.copyWith(
-                        color: AppColors.primary,
+                ),
+                Row(
+                  children: [
+                    _SettingsButton(onTap: onTap),
+                    const SizedBox(width: 8),
+                    AvatarPreview(
+                      height: 40,
+                      image: state.avatarSource,
+                      label: 'User avatar',
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: isSvg ? Border.all(color: AppColors.primary, width: 1.5) : null,
                       ),
                     ),
                   ],
                 ),
-              ),
-              Row(
-                children: [
-                  _SettingsButton(onTap: onTap),
-                  const SizedBox(width: 8),
-                  AvatarPreview(
-                    height: 40,
-                    image: state.avatarSource,
-                    label: 'User avatar',
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(color: AppColors.primary, width: 1.5),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
+              ],
+            ),
+          );
+        },
       ),
     );
   }

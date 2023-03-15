@@ -4,7 +4,7 @@ class UserModel {
   final String id;
   final String displayName;
   final String emailAddress;
-  final String phoneNumber;
+  final String? phoneNumber;
   final String avatarSource;
 
   const UserModel({
@@ -20,7 +20,7 @@ class UserModel {
       id: '',
       displayName: '',
       emailAddress: '',
-      phoneNumber: '',
+      phoneNumber: null,
       avatarSource: '',
     );
   }
@@ -32,7 +32,7 @@ class UserModel {
       id: user.uid,
       displayName: user.displayName!,
       emailAddress: user.email!,
-      phoneNumber: user.phoneNumber!,
+      phoneNumber: user.phoneNumber,
       avatarSource: user.photoURL!,
     );
   }

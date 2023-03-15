@@ -163,6 +163,7 @@ class AuthServiceImpl implements AuthService {
       final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
       final credential = GoogleAuthProvider.credential(accessToken: googleAuth?.accessToken, idToken: googleAuth?.idToken);
       await FirebaseAuth.instance.signInWithCredential(credential);
+      await collection.add(_toLocalForDoc(currentUser).toJson());
       return const ApiResult.success(data: "Sign in with Google successful");
     } catch (e) {
       return ApiResult.failure(error: NetworkExceptions.getException(e));

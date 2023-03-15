@@ -16,7 +16,7 @@ class ModalBottomSheetUtils {
     await showModalBottomSheet(
       context: context,
       elevation: 0,
-      isDismissible: false,
+      isDismissible: true,
       isScrollControlled: true,
       backgroundColor: Colors.transparent,
       builder: (ctx) => getBottomSheetFromEndDrawerItemType(context, type),

@@ -1,7 +1,6 @@
 import 'package:buddy/colors.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AvatarPreview extends StatelessWidget {
@@ -24,6 +23,7 @@ class AvatarPreview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final svg = image.contains('api.dicebear.com');
     final svgChild = SvgPicture.network(
       image,
       semanticsLabel: label,
@@ -39,12 +39,12 @@ class AvatarPreview extends StatelessWidget {
           color: AppColors.grey2,
         ),
         child: Padding(
-          padding: padding ?? const EdgeInsets.all(3),
+          padding:  svg ? padding ?? const EdgeInsets.all(3) : EdgeInsets.zero,
           child: Semantics(
             label: label,
-            child: isSvg ? svgChild : CachedNetworkImage(
+            child: svg ? svgChild : CachedNetworkImage(
               imageUrl: image,
-              fit: BoxFit.cover,
+              fit: BoxFit.contain,
               placeholder: (ctx, url) => const CupertinoActivityIndicator(),
             ),
           ),

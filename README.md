@@ -11,6 +11,16 @@ Budddy mobile app.
 
 ## Getting Started 🚀
 
+You can build and run the project by following these steps:
+
+* Clone this repository
+* Run ``flutter pub get``
+* Run build runner.
+
+```sh
+$ flutter pub run build_runner build
+```
+
 This project contains 3 flavors:
 
 - development

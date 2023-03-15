@@ -1,4 +1,3 @@
-import 'package:buddy/presentation/styles.dart';
 import 'package:flutter/material.dart';
 
 import 'navigation_bar_item.dart';
@@ -217,12 +216,6 @@ class _Bar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(15),
-      decoration: BoxDecoration(
-        boxShadow: [
-          Styles.boxDropShadow,
-          Styles.boxAltDropShadow,
-        ],
-      ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30),
         child: Material(

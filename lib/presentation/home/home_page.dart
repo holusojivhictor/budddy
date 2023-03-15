@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:buddy/application/bloc.dart';
 import 'package:buddy/domain/enums/enums.dart';
 import 'package:buddy/presentation/home/widgets/avatar_list_view.dart';
+import 'package:buddy/presentation/home/widgets/bordered_chips.dart';
 import 'package:buddy/presentation/home/widgets/home_header.dart';
 import 'package:buddy/presentation/shared/bordered_info_container.dart';
 import 'package:buddy/presentation/shared/utils/modal_bottom_sheet_utils.dart';
@@ -42,12 +43,13 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
           child: Column(
             children: [
               HomeHeader(
-                onTap: () => _goToTab(3),
+                onTap: () => _goToTab(2),
               ),
               const AvatarListView(),
               const BorderedInfoContainer(
                 title: 'Discover and connect with friends of shared interests from all over the globe.',
               ),
+              const BorderedChips(),
             ],
           ),
         ),

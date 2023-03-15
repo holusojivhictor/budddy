@@ -36,8 +36,7 @@ class CommonChoiceButton<T> extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               if (iconData != null)
-                ChoiceCircle(
-                  isSelected: isSelected,
+                _ChoiceCircle(
                   iconData: iconData!,
                 ),
               Padding(
@@ -55,15 +54,12 @@ class CommonChoiceButton<T> extends StatelessWidget {
   }
 }
 
-class ChoiceCircle extends StatelessWidget {
-  final bool isSelected;
+class _ChoiceCircle extends StatelessWidget {
   final IconData iconData;
 
-  const ChoiceCircle({
-    Key? key,
-    required this.isSelected,
+  const _ChoiceCircle({
     required this.iconData,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +67,7 @@ class ChoiceCircle extends StatelessWidget {
       padding: const EdgeInsets.all(5),
       decoration: const BoxDecoration(
         shape: BoxShape.circle,
-        color: Colors.white
+        color: Colors.white,
       ),
       child: Icon(iconData, size: 15),
     );

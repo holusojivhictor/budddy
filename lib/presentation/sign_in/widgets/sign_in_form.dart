@@ -117,18 +117,13 @@ class _SignInFormState extends State<SignInForm> {
               hasLoading: _bloc.isLoading,
               onPressed: () => _signIn(context),
             ),
-            Visibility(
-              visible: false,
-              child: Column(
-                children: [
-                  const ButtonDivider(
-                    dividerText: 'Or Login With',
-                  ),
-                  GoogleButton(
-                    onPressed: () {},
-                  ),
-                ],
-              ),
+            Column(
+              children: const [
+                ButtonDivider(
+                  dividerText: 'Or Login With',
+                ),
+                GoogleButton(),
+              ],
             ),
           ],
         ),

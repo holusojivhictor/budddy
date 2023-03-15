@@ -58,17 +58,17 @@ android {
         production {
             dimension "default"
             applicationIdSuffix ""
-            manifestPlaceholders = [appName: "Buddy"]
+            manifestPlaceholders = [appName: "Budddy"]
         }
         staging {
             dimension "default"
             applicationIdSuffix ".stg"
-            manifestPlaceholders = [appName: "[STG] Buddy"]
+            manifestPlaceholders = [appName: "[STG] Budddy"]
         }
         development {
             dimension "default"
             applicationIdSuffix ".dev"
-            manifestPlaceholders = [appName: "[DEV] Buddy"]
+            manifestPlaceholders = [appName: "[DEV] Budddy"]
         }
     }
 

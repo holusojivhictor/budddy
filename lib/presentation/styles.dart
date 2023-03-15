@@ -62,10 +62,7 @@ class Styles {
 
   static const chipBorderRadius = BorderRadius.all(chipCircularRadius);
 
-  static const defaultCardBorderRadius = BorderRadius.only(
-    topRight: Radius.circular(32),
-    topLeft: Radius.circular(32),
-  );
+  static const defaultCardBorderRadius = BorderRadius.all(Radius.circular(15));
 
   static const cardDefaultShape = RoundedRectangleBorder(
     borderRadius: defaultCardBorderRadius,
