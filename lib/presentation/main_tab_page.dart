@@ -22,7 +22,7 @@ class _MainTabPageState extends State<MainTabPage> with SingleTickerProviderStat
     super.initState();
     _tabController = TabController(
       initialIndex: _defaultIndex,
-      length: 4,
+      length: 3,
       vsync: this,
     );
   }
@@ -33,6 +33,7 @@ class _MainTabPageState extends State<MainTabPage> with SingleTickerProviderStat
     if (_didChangeDependencies) return;
     _didChangeDependencies = true;
     context.read<HomeBloc>().add(const HomeEvent.init());
+    context.read<BuddiesBloc>().add(const BuddiesEvent.init());
   }
 
   @override

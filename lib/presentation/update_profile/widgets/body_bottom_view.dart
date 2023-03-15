@@ -59,12 +59,15 @@ class _BodyBottomViewState extends State<BodyBottomView> {
             headerText: 'Email Address',
             hintText: 'Not modifiable',
           ),
-          FormFieldWithHeader(
-            enabled: false,
-            controller: phoneController,
-            textInputType: TextInputType.phone,
-            headerText: 'Phone Number',
-            hintText: 'Not modifiable',
+          Visibility(
+            visible: phoneController.text.isNotEmpty,
+            child: FormFieldWithHeader(
+              enabled: false,
+              controller: phoneController,
+              textInputType: TextInputType.phone,
+              headerText: 'Phone Number',
+              hintText: 'Not modifiable',
+            ),
           ),
           FormFieldWithHeader(
             controller: displayNameController,

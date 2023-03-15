@@ -5,6 +5,7 @@ export 'language/language_model.dart';
 export 'result/result_state.dart';
 export 'db/user/user_model.dart';
 export 'db/buddies/buddy_file_model.dart';
+export 'friend/friend_card_model.dart';
 export 'user/user_profile_model.dart';
 export 'buddy/buddy_card_model.dart';
 export 'avatar/avatar_card_model.dart';

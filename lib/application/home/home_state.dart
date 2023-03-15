@@ -7,7 +7,7 @@ class HomeState with _$HomeState {
   const factory HomeState.loaded({
     required String displayName,
     required String emailAddress,
-    required String phoneNumber,
+    String? phoneNumber,
     required String avatarSource,
     required List<SportType> interests,
     required List<FriendCardModel> friends,

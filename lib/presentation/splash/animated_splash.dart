@@ -1,5 +1,6 @@
 import 'package:buddy/domain/app_constants.dart';
 import 'package:buddy/domain/assets.dart';
+import 'package:buddy/theme.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedSplash extends StatelessWidget {
@@ -8,6 +9,7 @@ class AnimatedSplash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final themeExtension = theme.extension<AppThemeExtension>()!;
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -37,7 +39,7 @@ class AnimatedSplash extends StatelessWidget {
                   Text(
                     'Budddy',
                     style: theme.textTheme.headlineMedium!.copyWith(
-                      color: Colors.black,
+                      color: themeExtension.baseTextColor,
                       fontWeight: FontWeight.w600,
                       fontSize: 34,
                     ),

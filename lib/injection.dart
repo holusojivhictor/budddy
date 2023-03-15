@@ -10,6 +10,11 @@ class Injection {
     return PageViewBloc();
   }
 
+  static ForgotPasswordBloc get forgotPasswordBloc {
+    final authService = getIt<AuthService>();
+    return ForgotPasswordBloc(authService);
+  }
+
   static SignUpBloc getSignUpBloc(SessionBloc bloc) {
     final authService = getIt<AuthService>();
     return SignUpBloc(authService, bloc);
@@ -20,9 +25,14 @@ class Injection {
     return SignInBloc(authService, bloc);
   }
 
-  static ForgotPasswordBloc get forgotPasswordBloc {
+  static BuddyBloc getBuddyBloc(HomeBloc homeBloc) {
+    final appService = getIt<BuddyAppService>();
+    return BuddyBloc(appService, homeBloc);
+  }
+
+  static GoogleSignInBloc getGoogleSignInBloc(SessionBloc bloc) {
     final authService = getIt<AuthService>();
-    return ForgotPasswordBloc(authService);
+    return GoogleSignInBloc(authService, bloc);
   }
 
   static Future<void> init() async {

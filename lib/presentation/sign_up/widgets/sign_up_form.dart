@@ -6,7 +6,6 @@ import 'package:buddy/presentation/shared/button_divider.dart';
 import 'package:buddy/presentation/shared/buttons/google_button.dart';
 import 'package:buddy/presentation/shared/buttons/primary_button.dart';
 import 'package:buddy/presentation/shared/forms/form_field_with_header.dart';
-import 'package:buddy/presentation/shared/list_tiles/default_switch_list_tile.dart';
 import 'package:buddy/presentation/shared/utils/toast_utils.dart';
 import 'package:buddy/presentation/styles.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +25,6 @@ class _SignUpFormState extends State<SignUpForm> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController = TextEditingController();
   late SignUpBloc _bloc;
-  bool terms = false;
   bool obscure = true;
   bool submitted = false;
 
@@ -132,30 +130,19 @@ class _SignUpFormState extends State<SignUpForm> {
                 return null;
               },
             ),
-            DefaultSwitchListTile(
-              title: 'I agree to the terms and conditions.',
-              value: terms,
-              onChanged: (v) => setState(() => terms = v),
-            ),
             PrimaryButton(
               padding: Styles.authButtonPadding,
               text: 'Sign Up',
-              enabled: terms,
               hasLoading: _bloc.isLoading,
               onPressed: () => _signUp(context),
             ),
-            Visibility(
-              visible: false,
-              child: Column(
-                children: [
-                  const ButtonDivider(
-                    dividerText: 'Or Sign Up With',
-                  ),
-                  GoogleButton(
-                    onPressed: () {},
-                  ),
-                ],
-              ),
+            Column(
+              children: const [
+                ButtonDivider(
+                  dividerText: 'Or Sign Up With',
+                ),
+                GoogleButton(),
+              ],
             ),
           ],
         ),

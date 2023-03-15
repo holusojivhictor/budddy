@@ -7,12 +7,14 @@ part 'buddy_file_model.g.dart';
 
 @freezed
 class BuddyFileModel with _$BuddyFileModel {
+  // ignore: invalid_annotation_target
+  @JsonSerializable(explicitToJson: true)
   factory BuddyFileModel({
     @Default('') String referenceId,
     required String id,
     required String displayName,
     required String emailAddress,
-    required String phoneNumber,
+    String? phoneNumber,
     required String avatarSource,
     required List<SportType> sportInterests,
     required List<FriendModel> friends,
