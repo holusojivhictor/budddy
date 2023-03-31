@@ -16,7 +16,7 @@ dependencies:
   devicelocale: ^0.6.0
   dice_bear: ^0.1.5
   dio: ^5.0.1
-  firebase_auth: ^4.2.10
+  firebase_auth: ^4.4.0
   firebase_core: ^2.7.1
   flutter:
     sdk: flutter
